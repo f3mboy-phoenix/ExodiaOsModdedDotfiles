@@ -1,0 +1,195 @@
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS        #
+#                                   #
+#####################################
+
+##---------- Toggle right click context menu. ----------##
+
+# Toggle right click context menu. #
+~button3
+  xqp 0 $(xdo id -N Bspwm -n root) && jgmenu_run
+
+##---------- Keybindings for bspwm ----------##
+
+# Terminal (alacritty) #
+super + Return
+	bspterm
+
+# Terminal (floating) #
+super + shift + Return
+	bspterm -float
+
+# Terminal (floating) #
+super + q
+	bspterm -float
+
+# Terminal (fullscreen) #
+super + t
+	bspterm -fullscreen
+
+# Cava
+super + g
+	alacritty -e "cava"
+
+# File Manager
+super + e
+	thunar
+##---------- Rofi Launcher & Menus ----------##
+
+# Rofi App Launcher #
+alt + F1
+	sh ~/.config/bspwm/rofi/bin/launcher
+
+
+# Rofi Menus/Applets #
+super + {w,m,x,r,n}
+	sh ~/.config/bspwm/rofi/bin/{windows,mpd,powermenu,asroot,network}
+
+##---------- Applications ----------##
+
+# Open/close dashboard #
+
+# Launch Apps #
+super + shift + {b,e,l,x}
+	{chromium,geany -i,luanti,gnome-system-monitor}
+super + {d,v}
+	{gnome-disks,vlc}
+
+# Emergency Shutdown
+super + shift + a
+	poweroff
+
+# Show keybinds #
+super + a
+	alacritty -e less ~/.config/bspwm/keybinding/keybinds.txt
+
+# Show Audio Control #
+super + s
+	pavucontrol
+
+# Terminal Apps #
+ctrl + alt + {h,v}
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e {htop,vim}
+
+# Color Picker #
+super + p
+	xcolor
+
+# Lockscreen #
+ctrl + alt + l
+    sh ~/.config/bspwm/rofi/bin/powermenu
+
+# music art #
+super + shift + m
+	music --albumArtCover
+
+# Music CTL#
+super + z
+	mpc next
+super + shift + z
+	mpc prev
+super + ctrl + z
+	mpc toggle
+	
+##---------- Bspwm ----------##
+
+# Close App #
+super + {_,shift + }c
+	bspc node -{c,k}
+
+# Reload Keybindings #
+super + k
+	pkill -USR1 -x sxhkd
+
+# kill window #
+ctrl + alt + Escape
+    xkill
+
+# Quit/Restart bspwm #
+super + shift + {q,r}
+	bspc {quit,wm -r}
+	
+
+# Preselect the ratio #
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# Monocle #
+super + l
+	bspc desktop -l next
+	
+# Fullscreen #
+super + f
+    bspc node -t "~"fullscreen
+
+# Toggle beetwen floating & tiled #
+super + space
+    bspc node -t "~"{floating,tiled}
+
+# Pseudo Tiled & tiled mode #
+super + shift + space
+    bspc node -t "~"{pseudo_tiled,tiled}
+
+# Uptime #
+super + u
+	dunstify -i "" "System $(uptime -p)"
+	
+# Set the node flags #
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+# Send the window to another edge of the screen #
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# Change focus to next window, including floating window #
+alt + {_,shift + }Tab
+	bspc node -f {next.local,prev.local}
+
+# Switch workspace #
+ctrl + alt + {Left,Right}
+	bspc desktop -f {prev.local,next.local}
+
+# Switch to last opened workspace #
+super + {Tab,grave}
+	bspc {node,desktop} -f last
+
+# Send focused window to another workspace #
+super + {_,shift + }{1-8}
+	bspc {desktop -f,node -d} '^{1-8}'
+
+# Expanding windows #
+ctrl + super + alt + Up
+	bspc node -z right 20 0; \
+	bspc node -z top 0 -20; \
+	bspc node -z bottom 0 20; \
+	bspc node -z left -20 0
+
+# Shrinking windows #
+ctrl + super + alt + Down
+	bspc node -z right -20 0; \
+	bspc node -z top 0 20; \
+	bspc node -z bottom 0 -20; \
+	bspc node -z left 20 0
+
+# Shrinking windows by one  #
+super + alt + {Left,Right,Up,Down}
+	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
+	
+# Move floating windows #
+alt + Escape + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#  Hide/Unhide Window #
+super + i
+	winmask
+
+# Bluetooth Manager #
+super + b
+	blueman-manager
+
+## ---------- END ---------- ##

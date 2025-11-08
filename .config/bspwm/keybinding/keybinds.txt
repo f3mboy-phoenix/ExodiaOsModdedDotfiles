@@ -1,0 +1,68 @@
+
+@author      : F3mboyPhoenix
+  GitHub    : @f3mboy-phoenix
+  Developer : F3mboyPhoenix
+﫥  Copyright : F3mboyPhoenix
+
+( Super + Return )              Terminal
+( Super + Shift + Return )      Floating Terminal
+( Super + Ctrl + 1-9 )          Preselect Ratio Option
+( Super + Shift + 1-8 )         Send focused window to workspace number
+( Super + Ctrl + M )            Mark Window
+( Super + Ctrl + X )            Lock Window
+( Super + Ctrl + Y )            Stickyify Window
+( Super + Ctrl + Z )            Privitize Window
+( Super + Ctrl + Alt + Up,Down ) Move Middle gap 
+( Super + Alt + Left,Right,Up,Down ) Shrink Windows by one?
+
+( Super + A )                   Show Keybinds
+( Super + Shift + A )           Emegency Shutdown
+( Super + B )                   Bluetooth Manager
+( Super + Shift + B )           Chromium
+( Super + C )                   Close App
+( Super + Shift + C )           Close App
+( Super + D )                   Gnome Disks
+( Super + E )                   Thunar
+( Super + Shift + E )           Geany
+( Super + F )                   Toggle Fullscreen
+( Super + G )                   Cava
+( Super + I )                   Hide Window
+( Super + K )                   Reload Keybindings
+( Super + L )                   Set to Monocle ( borderless + polybar )
+( Super + Shift + L )           Luanti
+( Super + M )                   Music Overlay
+( Super + Shift + M )           Nmcpcpp Album
+( Super + N )                   Network
+( Super + P )                   Color Picker
+( Super + Q )                   Floating Terminal
+( Super + Shift + Q )           Quit Bspwm
+( Super + R )                   Run As Root
+( Super + Shift + R )           Restart Bspwm
+( Super + S )                   Sound Control
+( Super + T )                   Fullscreen Terminal
+( Super + U )                   Uptime
+( Super + W )                   Window Swicher
+( Super + X )                   Power Menu
+( Super + Shift + X )           Gnome System Monitor
+( Super + Z )                   Next Song
+( Super + Shift + Z )           Prev Song
+( Super + Ctrl + Z )            Toggle Play/Pause
+( Super + Space )               Toggle beetwen floating & tiled
+( Super + Shift + Space )       Pseudo Tiled & tiled mode
+( Super + Left,Right,Up,Down )  Send to Key Edge, has shift option.
+( Super + Tab )                 Switch to last node
+( Super + Grave )               Switch to Last Workspace
+
+( Ctrl + Alt + Esc )            Kill Window
+( Ctrl + Alt + Left )           Workspace Left
+( Ctrl + Alt + Right )          Workspace Right
+
+
+( Ctrl + Alt + H )              HTop
+( Ctrl + Alt + L )              Power Menu
+( Ctrl + Alt + V )              Vim
+
+( Alt + Tab )                   Change focus to next window, shift for opposite direction
+( Alt + Escape + Left,Down,Up,Right ) Move Floating Windows
+
+( Super + Click )               Move Floating Windows
